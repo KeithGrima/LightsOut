@@ -43,7 +43,7 @@ namespace LightsOut.Controllers
                 {
                     for (int y = 0; y < yAxis; y++)
                     {
-                        var result = randomBool();
+                        var result = RandomBool();
                         matrix[x, y] = result;
 
                         if (result == true)
@@ -147,7 +147,7 @@ namespace LightsOut.Controllers
         /// has a 10% chance
         /// </summary>
         /// <returns></returns>
-        private bool randomBool()
+        private bool RandomBool()
         {
             int rndNumber = random.Next(0, 100);
 
