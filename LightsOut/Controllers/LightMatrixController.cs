@@ -81,7 +81,7 @@ namespace LightsOut.Controllers
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public List<Tuple<int, int, bool>> GetAddjacentCells(int x, int y)
+        public List<Tuple<int, int, bool>> GetAdjacentCells(int x, int y)
         {
             List<Tuple<int, int, bool>> liIndex = new List<Tuple<int, int, bool>>();
 

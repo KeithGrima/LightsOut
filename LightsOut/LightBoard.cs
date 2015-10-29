@@ -55,7 +55,7 @@ namespace LightsOut
             var y = btnClicked.yAxis;
 
             //Get Addjacent Cells of this Button
-            var cellsToToggle = matrixController.GetAddjacentCells(x, y);
+            var cellsToToggle = matrixController.GetAdjacentCells(x, y);
 
             //Loop through all addjacent cells and turn ON/OFF
             foreach (var cell in cellsToToggle)

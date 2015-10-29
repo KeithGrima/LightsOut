@@ -75,7 +75,7 @@ namespace UnitTests
             LightMatrixController matrixController = new LightMatrixController();
             var matrix = matrixController.GenerateMatrix(5, 5);
 
-            var addajacentCells = matrixController.GetAddjacentCells(2, 2);
+            var addajacentCells = matrixController.GetAdjacentCells(2, 2);
 
             Assert.IsNotNull(addajacentCells);
             Assert.IsTrue(addajacentCells.Count == 5);
@@ -209,15 +209,15 @@ namespace UnitTests
             LightMatrixController matrixController = new LightMatrixController();
             var matrix = matrixController.GenerateMatrix(5, 5);
 
-            var addajacentCellsUpperLeft = matrixController.GetAddjacentCells(0, 0);
-            var addajacentCellsUpperRight = matrixController.GetAddjacentCells(4, 0);
-            var addajacentCellsLowerRight = matrixController.GetAddjacentCells(4, 4);
-            var addajacentCellsLowerLeft = matrixController.GetAddjacentCells(0, 4);
+            var addajacentCellsUpperLeft = matrixController.GetAdjacentCells(0, 0);
+            var addajacentCellsUpperRight = matrixController.GetAdjacentCells(4, 0);
+            var addajacentCellsLowerRight = matrixController.GetAdjacentCells(4, 4);
+            var addajacentCellsLowerLeft = matrixController.GetAdjacentCells(0, 4);
 
-            var addajacentCellsCenterUp = matrixController.GetAddjacentCells(2, 0);
-            var addajacentCellsCenterDown = matrixController.GetAddjacentCells(0, 2);
-            var addajacentCellsCenterRight = matrixController.GetAddjacentCells(4, 2);
-            var addajacentCellsCenterLeft = matrixController.GetAddjacentCells(2, 4);
+            var addajacentCellsCenterUp = matrixController.GetAdjacentCells(2, 0);
+            var addajacentCellsCenterDown = matrixController.GetAdjacentCells(0, 2);
+            var addajacentCellsCenterRight = matrixController.GetAdjacentCells(4, 2);
+            var addajacentCellsCenterLeft = matrixController.GetAdjacentCells(2, 4);
 
             Assert.IsTrue(addajacentCellsLowerLeft.Count == 3);
             Assert.IsTrue(addajacentCellsUpperRight.Count == 3);
@@ -246,7 +246,7 @@ namespace UnitTests
 
             Assert.IsFalse(matrixController.ValidateBoard());
 
-            matrixController.GetAddjacentCells(0, 0);
+            matrixController.GetAdjacentCells(0, 0);
 
             Assert.IsTrue(matrixController.ValidateBoard());
         }
@@ -267,7 +267,7 @@ namespace UnitTests
 
             Assert.IsFalse(matrixController.ValidateBoard());
 
-            matrixController.GetAddjacentCells(0, 4);
+            matrixController.GetAdjacentCells(0, 4);
 
             Assert.IsTrue(matrixController.ValidateBoard());
         }
@@ -288,7 +288,7 @@ namespace UnitTests
 
             Assert.IsFalse(matrixController.ValidateBoard());
 
-            matrixController.GetAddjacentCells(4, 4);
+            matrixController.GetAdjacentCells(4, 4);
 
             Assert.IsTrue(matrixController.ValidateBoard());
         }
@@ -309,7 +309,7 @@ namespace UnitTests
 
             Assert.IsFalse(matrixController.ValidateBoard());
 
-            matrixController.GetAddjacentCells(4, 0);
+            matrixController.GetAdjacentCells(4, 0);
 
             Assert.IsTrue(matrixController.ValidateBoard());
         }
@@ -332,7 +332,7 @@ namespace UnitTests
 
             Assert.IsFalse(matrixController.ValidateBoard());
 
-            matrixController.GetAddjacentCells(2, 2);
+            matrixController.GetAdjacentCells(2, 2);
 
             Assert.IsTrue(matrixController.ValidateBoard());
         }
